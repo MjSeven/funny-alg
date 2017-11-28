@@ -1,0 +1,2 @@
+# funny-alg
+littlt algorithm

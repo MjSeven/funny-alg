@@ -12,7 +12,7 @@ def quicksort(array):
 
     return quicksort(less) + [pivot] + quicksort(great)
 
-a = [10,2,89,3,56,34,23,67,23,1,345,3623462,23,154,43]
-print quicksort(a)
+#a = [10,2,89,3,56,34,23,67,23,1,345,3623462,23,154,43]
+#print quicksort(a)
 
 

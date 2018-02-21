@@ -19,3 +19,12 @@ def selectionSort(arr):
         newarr.append(arr.pop(smallest))
 
     return newarr
+
+# 另一种写法
+def selection_sort(list_test):
+    for i in range(0, len(list_test)):
+        min_d = i       # 0 1
+        for j in range(i + 1, len(list_test)):      # 1 - len(list_test)
+            if list_test[j] < list_test[min_d]:
+                min_d = j
+        list_test[i], list_test[min_d] = list_test[min_d], list_test[i]

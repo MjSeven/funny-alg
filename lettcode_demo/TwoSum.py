@@ -18,12 +18,10 @@ class Solution(object):
                     return [i,j
 
 
-class Solution:
-    # @return a tuple, (index1, index2)
-    def twoSum(self, num, target):
-        dict = {}
-        for i in xrange(len(num)):
-            x = num[i]
-            if target-x in dict:
-                return (dict[target-x]+1, i+1)
-            dict[x] = i
+class Solution(object):
+    def twoSum(self, nums, target):
+        keys = {}
+        for cnt, num in enumerate(nums):
+            if target - num in keys:
+                return keys[target-num], cnt
+            keys[num] = cnt 

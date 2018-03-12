@@ -11,7 +11,7 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        carry = 0
+        carry = 0   # 进位符
         root = n = ListNode(0)
         while l1 or l2 or carry:
             v1 = v2 = 0
@@ -24,4 +24,15 @@ class Solution(object):
             carry, val = divmod(v1+v2+carry, 10)
             n.next = ListNode(val)
             n = n.next
-        return root.next
+        return root.next    # 这一步一定要仔细理解为什么会这样返回
+
+    
+# 链表构造
+idx = ListNode(3)
+n = idx
+n.next = ListNode(4)
+n = n.next
+n.next = ListNode(5)
+n = n.next
+print(idx.val,idx.next.val,idx.next.next.val)
+    

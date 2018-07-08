@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 #coding:utf-8
 
-def binary_search(list, item):
+def binary_search(alist, item):
     low = 0
-    high = len(list) - 1
+    high = len(alist) - 1
     while low <= high:
         mid = (low + high) // 2
-        guess = list[mid]
+        guess = alist[mid]
 
         if guess == item:
             return mid

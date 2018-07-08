@@ -16,14 +16,12 @@ def binary_search(list, item):
         else:
             low = mid + 1
     return None
-a = [1, 3, 5, 7, 9]
-print binary_search(a,9)
-print binary_search(a,5)
-print binary_search(a, -1)
 
+def main():
+    a = [1, 3, 5, 7, 9]
+    print(binary_search(a,9))
+    print(binary_search(a,5))
+    print(binary_search(a, -1))
 
-
-
-
-
-
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,52 @@
+> 将字符串中的每个空格替换为 "%20"。例如 “We are happy”
+输出为“We%20are%20happy”
+
+使用 Python
+```python
+s = 'We are happy'
+s = s.replace(' ', '%20')
+```
+不过也不知道 `replace` 是线性替换还是使用了优化技巧。
+采用 C 语言实现：
+```C
+void ReplaceBlank(char string[], int length)
+{
+    // length 表示实际可以使用的内存大小
+    if(string == nullptr || length <= 0)
+        reutrn
+        
+    int originalLength = 0;
+    int numberOfBlank = 0;
+    int i = 0;
+    while(string[i] != '\0')
+    {
+        ++originalLength;
+        if(string[i] == ' ')
+            ++numberOfBlank;
+        ++i;
+    }
+    
+    int newLength = originalLength + 2*numberOfBlank；
+    if(newLength > length)
+        return
+    
+    // 具体开始替换字符
+    int indexOfOriginal = originalLength;
+    int indexOfNew = newLength;
+    while(indexOfOriginal >= 0 && indexOfNew > indexOfOriginal)
+    {
+        if(string[indexOfOriginal] == ' ')
+        {
+            string[indexOfNew--] = '0';
+            string[indexOfNew--] = '2';
+            string[indexOfNew-] = '%';
+        }
+        else
+        {
+            string[indexOfNew--] = 'string[indexOfOriginal];
+        }
+        --indexOfOriginal;
+    }
+}
+
+```

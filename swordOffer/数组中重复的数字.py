@@ -22,7 +22,46 @@ def duplicate(nums, length):
     return
 
 
+def CountRange(nums, length, start, end):
+    if not nums:
+        return 0
+    count = 0
+    for i in range(length):
+        if start <= nums[i] <= end:
+            count += 1
+    return count
+
+
+def getDuplication(nums, length):
+    """
+    不修改数组找出重复的数字
+        利用二分查找的思想
+    :param nums: list
+    :param length: int
+    :return: int
+    """
+    if not nums or length <= 0:
+        return
+
+    start, end = 1, length-1
+    while end >= start:
+        mid = start + ((end-start)>>1)
+        count = CountRange(nums, length, start, mid)
+        if end == start:
+            if count > 1:
+                return start
+            else:
+                break
+        if count > mid-start + 1:
+            end = mid
+        else:
+            start = mid + 1
+    return -1
+
+
 if __name__ == '__main__':
     nums = [2, 3, 1, 0, 2, 5, 3]
     print(duplicate(nums, len(nums)))
+    nums = [2, 3, 5, 4, 3, 2, 6, 7]
+    print(getDuplication(nums, len(nums)))
 

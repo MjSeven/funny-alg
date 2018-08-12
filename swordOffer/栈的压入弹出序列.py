@@ -19,3 +19,9 @@ def isPopOrder(pushV, popV):
         else:
             return False
     return True
+
+
+if __name__ == '__main__':
+    push = [1,2,3,4,5]
+    pop = [1, 2, 3, 4, 5]
+    print(isPopOrder(push, pop))

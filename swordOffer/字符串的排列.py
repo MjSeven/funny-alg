@@ -57,3 +57,5 @@ if __name__ == '__main__':
     s = 'abc'
     res = permutation1(s)
     print(res)
+    #n, m, s = map(int, input().split())
+    print([]*3)

@@ -35,7 +35,8 @@ class Solution:
 
     def pop(self):
         if len(self.queue1) == 0:
-            return None
+            # return None
+            raise IndexError
         while len(self.queue1) != 1:
             self.queue2.append(self.queue1.pop(0))
         self.queue1, self.queue2 = self.queue2 ,self.queue1

@@ -13,7 +13,7 @@ class TreeNode:
 def convert(pRootOfTree):
     if not pRootOfTree:
         return
-    if not pRootOfTree.left and pRootOfTree.right:
+    if not pRootOfTree.left and not pRootOfTree.right:
         return
     # 处理左子树
     convert(pRootOfTree.left)
@@ -39,6 +39,12 @@ def convert(pRootOfTree):
         pRootOfTree = pRootOfTree.left
     return pRootOfTree
 
+
+if __name__ == '__main__':
+    root = TreeNode(10)
+    root.left = TreeNode(6)
+    root.right = TreeNode(14)
+    convert(root)
 
 class Solution:
     def NodeList(self, pRootOfTree):

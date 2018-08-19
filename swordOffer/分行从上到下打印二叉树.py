@@ -9,6 +9,11 @@ class BinaryTreeNode:
 
 
 def Print(root):
+    """
+    层级打印二叉树
+    :param root: BinaryTreeNode
+    :return:
+    """
     if not root:
         return
     s = []
@@ -28,6 +33,11 @@ def Print(root):
             nextlevel, toBeprint = toBeprint, nextlevel
 
 def Print(pRoot):
+    """
+    之字形打印二叉树
+    :param pRoot: BinaryTreeNode
+    :return:
+    """
     if not pRoot:
         return []
     from collections import deque

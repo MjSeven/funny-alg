@@ -24,8 +24,10 @@ def Print(root):
         print(pNode.val)
         toBeprint -= 1
         if pNode.left:
+            s.append(pNode.left)
             nextlevel += 1
         if pNode.right:
+            s.append(pNode.right)
             nextlevel += 1
 
         if toBeprint == 0:

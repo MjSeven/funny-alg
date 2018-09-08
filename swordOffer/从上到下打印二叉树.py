@@ -43,3 +43,17 @@ def Print(pRoot):
             if node.right:
                 tmp.append(node.right)
     return res
+
+
+
+if __name__ == '__main__':
+    node = BinaryTreeNode(1)
+    node.left = BinaryTreeNode(2)
+    node.right = BinaryTreeNode(3)
+    node.left.left = BinaryTreeNode(4)
+    node.left.right = BinaryTreeNode(5)
+    node.right.left = BinaryTreeNode(6)
+    node.right.right = BinaryTreeNode(7)
+    #PrintFromToptoBottom(node)
+    res = Print(node)
+    print(res)

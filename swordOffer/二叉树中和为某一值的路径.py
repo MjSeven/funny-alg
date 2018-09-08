@@ -10,7 +10,7 @@ class BinaryTreeNode:
 def findPath(root, expectNumber):
     if not root:
         return []
-    if root and root.left and not root.right and root.val == expectNumber:
+    if root and not root.left and not root.right and root.val == expectNumber:
         return [[root.val]]
 
     res = []

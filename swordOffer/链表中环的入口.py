@@ -22,7 +22,7 @@ def mettingNode(pHead):
     if not pHead:
         return None
     pSlow = pHead.next
-    pFast = pHead.next
+    pFast = pSlow.next
     while pSlow and pFast:
         if pSlow == pFast:
             return pSlow

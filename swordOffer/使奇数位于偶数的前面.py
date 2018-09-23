@@ -3,6 +3,7 @@
 输入一个整数数组，使该数组中所有奇数位于数组的前半部分，偶数位于后半部分
 """
 
+
 def solution(nums, length):
     if not nums or length <= 0:
         return

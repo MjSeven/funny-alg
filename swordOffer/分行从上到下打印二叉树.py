@@ -19,8 +19,10 @@ def Print(root):
     s = []
     s.append(root)
     nextlevel, toBeprint = 0, 1
+    tmp = []
     while len(s):
         pNode = s.pop(0)
+        tmp.append(pNode.val)
         print(pNode.val)
         toBeprint -= 1
         if pNode.left:
@@ -34,7 +36,8 @@ def Print(root):
             print()
             nextlevel, toBeprint = toBeprint, nextlevel
 
-def Print(pRoot):
+
+def printbinarytree(pRoot):
     """
     之字形打印二叉树
     :param pRoot: BinaryTreeNode

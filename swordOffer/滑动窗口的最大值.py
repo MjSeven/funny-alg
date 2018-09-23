@@ -1,6 +1,8 @@
 from collections import deque
+
+
 def max_slidewindow(nums, k):
-    if not nums or k<= 0:
+    if not nums or k <= 0:
         return
     if k == 1:
         return nums
@@ -8,7 +10,7 @@ def max_slidewindow(nums, k):
     qmax = deque([])
     qmax.append(0)
     res = []
-    for x,y in enumerate(nums[1:], 1):
+    for x, y in enumerate(nums[1:], 1):
         if nums[qmax[-1]] <= y:
             for i in range(len(qmax)-1, -1, -1):
                 if nums[qmax[i]] > y:

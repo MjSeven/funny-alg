@@ -27,6 +27,7 @@ def get_missing_number(numbers):
 数组中数值和下标相等的元素
 """
 
+
 def get_number(numbers):
     if not numbers:
         return -1

@@ -32,3 +32,12 @@ def is_balanced(pRoot):
                 depth = max(left, right) +1
                 return True
     return core(pRoot, depth)
+
+
+def isbalanced_solution(proot):
+    if not proot:
+        return True
+    if abs(get_depth(proot.left) - get_depth(proot.right)) > 1:
+        return  False
+
+    return  isbalanced_solution(proot.left) and isbalanced_solution(proot.right)

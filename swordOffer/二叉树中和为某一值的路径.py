@@ -1,5 +1,6 @@
 # !/usr/bin/python3
 
+
 class BinaryTreeNode:
     def __init__(self, val, left=None, right=None):
         self.val = val

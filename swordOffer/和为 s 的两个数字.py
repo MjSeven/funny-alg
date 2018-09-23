@@ -18,6 +18,8 @@ def find_numbers_sum(numbers, s):
         else:
             behind += 1
 
+a = [1,2,3,4,5,6]
+find_numbers_sum(a, 11)
 
 """
 和为 s 的连续正数序列
